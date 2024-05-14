@@ -14,7 +14,6 @@ export default function Catalogo({ route }) {
     const { id } = route.params;
 
     let produtosCategoria;
-
     produtos.forEach(product => {
         if (product.categoria_id === id) {
             produtosCategoria = product;
@@ -27,9 +26,9 @@ export default function Catalogo({ route }) {
                 <View style={styles.baseApp}>
 
                     <Category />
-
+            
                     <FlatList
-                        style={{flex: 1}}
+                        style={styles.lista}
                         data={produtosCategoria.produtos}
                         keyExtractor={(item) => item.id}
                         renderItem={({ item }) => (
@@ -59,6 +58,11 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         height: '100%',
+    },
+
+    lista: {
+        flex: 1,
+        height: '50%',
     },
 
     banner_promotion: {
