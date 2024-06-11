@@ -33,6 +33,8 @@ export default function Catalogo({ route }) {
                         keyExtractor={(item) => item.id}
                         renderItem={({ item }) => (
                             <Card
+                                id={item.id}
+                                idCategoria={id}
                                 preco={item.preco}
                                 nome={item.nome}
                                 descricao={item.descricao}

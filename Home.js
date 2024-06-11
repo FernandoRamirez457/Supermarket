@@ -29,6 +29,8 @@ export default function Home() {
                         keyExtractor={(item) => item.id}
                         renderItem={({ item }) => (
                             <CardHome
+                                idProduto={item.id}
+                                idCategoria={2}
                                 preco={item.preco}
                                 nome={item.nome}
                                 imagemUrl={item.imagemUrl}
